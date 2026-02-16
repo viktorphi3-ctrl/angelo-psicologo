@@ -1,0 +1,63 @@
+---
+import { FadeIn } from "./react/FadeIn";
+
+// Placeholder image from Unsplash (Psychology/Office theme)
+const HERO_IMAGE = "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?q=80&w=2069&auto=format&fit=crop";
+---
+
+{/* Updated py padding to ensure header doesn't overlap on desktop (lg:pt-32) */}
+<section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden px-6 pt-32 pb-16 md:pt-40 md:pb-24">
+  {/* Added mt-10 to push content down from fixed header on mobile */}
+  <div class="container mx-auto grid lg:grid-cols-2 gap-10 lg:gap-12 items-center mt-10 lg:mt-0">
+    
+    {/* Text Content */}
+    <div class="order-2 lg:order-1 flex flex-col items-start gap-6 z-10 text-left">
+      <span class="font-inter text-ana-terracotta-suave tracking-wider text-xs md:text-sm uppercase font-medium">
+        Psicólogo & Psicanalista
+      </span>
+      
+      <h1 class="font-playfair text-4xl md:text-6xl lg:text-7xl text-ana-text leading-[1.15] md:leading-[1.1] mb-2">
+        Olá, que bom que <br class="hidden md:block" /> 
+        <span class="text-ana-terracotta-suave italic">chegou até aqui!</span>
+      </h1>
+      
+      <div class="font-inter text-ana-text/90 text-base md:text-xl max-w-lg leading-relaxed space-y-4 md:space-y-5">
+        <p>
+          Sei que o primeiro passo sempre é o mais difícil. A psicanálise diz que nunca desejamos sair da nossa zona de conforto, mesmo que ela seja dolorosa para gente. O conhecido é sempre mais fácil.
+        </p>
+        <p>
+          No entanto, você está fazendo o mais difícil, procurar ajuda! E é para isso que estou aqui, para te ajudar, te acolher e construir juntos daqui para frente um novo caminho.
+        </p>
+        <p>
+          Sou especializado em atendimentos online, oferecendo um espaço seguro e sigiloso para que você possa ser escutado da forma que merece, sem julgamentos.
+        </p>
+      </div>
+      
+      <a 
+        href="https://wa.me/5500000000000" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group mt-4 inline-flex items-center gap-2 bg-ana-terracotta-suave text-white px-8 py-3 rounded-full font-inter font-medium transition-all hover:bg-opacity-90 hover:shadow-lg hover:-translate-y-0.5"
+      >
+        Agendar Consulta
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    {/* Image Content */}
+    <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end">
+      <div class="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-ana-terracotta-suave/10">
+        <div class="absolute inset-0 bg-ana-terracotta-suave/10 mix-blend-multiply pointer-events-none z-10"></div>
+        <img 
+          src={HERO_IMAGE} 
+          alt="Consultório de Psicologia Acolhedor" 
+          class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
+        />
+      </div>
+      
+      {/* Decorative Element */}
+      <div class="absolute -z-10 top-10 right-10 w-full h-full border border-ana-terracotta-suave/30 rounded-2xl transform translate-x-4 translate-y-4"></div>
+    </div>
+
+  </div>
+</section>

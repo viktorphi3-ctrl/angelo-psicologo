@@ -1,0 +1,87 @@
+---
+import { FadeIn } from "./react/FadeIn";
+import { MessageCircle, Calendar, Sparkles } from "lucide-react";
+
+const steps = [
+  {
+    number: "01",
+    label: "1 passo",
+    title: "Primeiro Contato",
+    description: "Marcamos uma conversa inicial sem compromisso para nos conhecermos e você ver se o processo faz sentido para você.",
+    icon: MessageCircle
+  },
+  {
+    number: "02",
+    label: "2 passo",
+    title: "Atendimentos",
+    description: "Agendamos nossas consultas semanais ou quinzenais de 50 minutos, onde você terá liberdade para dizer o que desejar, sem julgamentos.",
+    icon: Calendar
+  },
+  {
+    number: "03",
+    label: "3 passo",
+    title: "Mudança",
+    description: "Aqui é onde vai perceber as mudanças na sua vida, na medida em que você se transforma e transforma sua forma de estar no mundo.",
+    icon: Sparkles
+  }
+];
+---
+
+<section class="py-16 md:py-24 lg:py-32 bg-white relative">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col items-center text-center mb-28">
+      <FadeIn client:visible>
+        <span class="font-inter text-ana-terracotta-suave tracking-wider text-sm uppercase font-medium mb-3 block">
+          O Caminho
+        </span>
+        <h2 class="font-playfair text-4xl md:text-5xl text-ana-text">
+          Como funciona o tratamento?
+        </h2>
+      </FadeIn>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto">
+      {/* Connecting Line (Desktop) */}
+      <div class="hidden md:block absolute top-[3rem] left-0 right-0 h-0.5 bg-gray-100 -z-0"></div>
+
+      <div class="grid md:grid-cols-3 gap-16 md:gap-20">
+        {steps.map((step, index) => (
+          <FadeIn client:visible delay={index * 0.2} direction="up" className="relative z-10">
+            <div class="flex flex-col items-center text-center group h-full">
+              
+              <div class="w-24 h-24 rounded-full bg-ana-offwhite border-2 border-ana-terracotta-suave/20 flex items-center justify-center mb-8 group-hover:border-ana-terracotta-suave group-hover:bg-white transition-all duration-300 shadow-sm relative group-hover:shadow-md group-hover:scale-110">
+                 <span class="absolute -top-4 -right-4 w-10 h-10 bg-ana-terracotta-suave text-white rounded-full flex items-center justify-center font-playfair text-lg shadow-md border-2 border-white">
+                   {step.number}
+                 </span>
+                 <step.icon className="size-10 text-ana-terracotta-suave" strokeWidth={1.25} />
+              </div>
+
+              <span class="font-inter text-sm font-bold text-ana-terracotta-suave uppercase tracking-widest mb-2 bg-ana-terracotta-suave/10 px-3 py-1 rounded-full">{step.label}</span>
+              <h3 class="font-playfair text-2xl text-ana-text mb-4 mt-2">
+                {step.title}
+              </h3>
+              
+              <p class="font-inter text-ana-text/80 text-base leading-relaxed max-w-xs">
+                {step.description}
+              </p>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+    </div>
+    
+    <div class="mt-16 text-center">
+      <FadeIn client:visible delay={0.6}>
+        <a 
+          href="https://wa.me/5500000000000" 
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-ana-terracotta-suave font-inter font-medium hover:text-ana-text transition-colors border-b border-ana-terracotta-suave/30 hover:border-ana-text pb-0.5"
+        >
+          Iniciar conversa agora
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </FadeIn>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+---
+import { FadeIn } from "./react/FadeIn";
+import { Play } from "lucide-react";
+---
+
+<section class="py-16 md:py-24 lg:py-32 bg-white relative overflow-hidden">
+  <div class="container mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      
+      {/* Video Placeholder */}
+      <FadeIn client:visible direction="right">
+        <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-ana-text/5 group cursor-pointer shadow-2xl shadow-ana-terracotta-suave/10 border border-ana-terracotta-suave/10 transition-transform duration-500 hover:scale-[1.01]">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-16 h-16 rounded-full bg-ana-terracotta-suave text-white flex items-center justify-center pl-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <Play className="size-6 fill-white" />
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 text-center">
+            <span class="font-inter text-sm text-ana-text/60 bg-white/80 px-3 py-1 rounded-full backdrop-blur-sm">
+              Vídeo de Apresentação
+            </span>
+          </div>
+          {/* Placeholder Background - Replace with thumbnail later */}
+          <div class="absolute inset-0 -z-10 bg-gradient-to-br from-ana-beige to-ana-offwhite"></div>
+        </div>
+      </FadeIn>
+
+      {/* Content */}
+      <FadeIn client:visible direction="left">
+        <div class="flex flex-col items-start justify-center h-full">
+          <h2 class="font-playfair text-4xl md:text-5xl text-ana-text mb-8 leading-tight">
+            Por que a <span class="italic text-ana-terracotta-suave">psicanálise?</span>
+          </h2>
+          
+          <div class="font-inter text-ana-text/90 text-xl leading-relaxed space-y-6">
+            <p>
+              Trabalho com esse método de tratamento por entender que não há respostas prontas para nossa vida.
+            </p>
+            <p>
+              Cada um vive da forma que faz mais sentido para si. Meu trabalho é te auxiliar a encontrar seu caminho.
+            </p>
+          </div>
+
+          <div class="mt-10 pt-8 border-t border-ana-terracotta-suave/20 w-full">
+            <h3 class="font-playfair text-2xl text-ana-text mb-4">Público</h3>
+            <div class="flex gap-4 flex-wrap">
+                <span class="px-6 py-2.5 bg-ana-beige rounded-full text-ana-text font-inter text-base font-medium border border-ana-terracotta-suave/20 shadow-sm hover:scale-105 transition-transform duration-300 cursor-default">Adultos</span>
+                <span class="px-6 py-2.5 bg-ana-beige rounded-full text-ana-text font-inter text-base font-medium border border-ana-terracotta-suave/20 shadow-sm hover:scale-105 transition-transform duration-300 cursor-default">Adolescentes</span>
+            </div>
+          </div>
+        </div>
+      </FadeIn>
+
+    </div>
+  </div>
+</section>

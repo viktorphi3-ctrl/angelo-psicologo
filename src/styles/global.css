@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Ana Suy Inspired Palette */
+  --color-ana-beige: #F4F1EA;
+  --color-ana-terracotta: #DDA15E;
+  /* Adjusted to be softer/warmer based on "terracotta suave" */
+  /* Actually strictly speaking terracotta is more reddish-brown, like #E07A5F. Let's use #C78D75 for "suave". */
+  /* Or maybe #BC6C25 (earthy). Let's stick to a sophisticated one. */
+  --color-ana-terracotta-suave: #C78D75;
+  --color-ana-offwhite: #FAF9F6;
+  --color-ana-text: #2D2A26;
+
+  /* Fonts */
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* Spacing/Border Radius if needed */
+}
+
+/* Base styles / Reset */
+@layer base {
+  html {
+    font-family: var(--font-inter);
+    background-color: var(--color-ana-offwhite);
+    color: var(--color-ana-text);
+    font-size: 18px;
+    /* UI Refinement: Increased base font size */
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-playfair);
+  }
+}

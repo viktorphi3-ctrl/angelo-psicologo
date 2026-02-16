@@ -1,0 +1,24 @@
+---
+import { MessageCircle } from "lucide-react";
+---
+
+<a
+  href="https://wa.me/5500000000000"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Conversar no WhatsApp"
+  class="fixed bottom-6 right-6 z-50 group"
+>
+  <div class="relative flex items-center justify-center size-14 bg-[#25D366] rounded-full shadow-lg shadow-[#25D366]/30 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+    
+    {/* Pulse Animation Ring */}
+    <div class="absolute inset-0 rounded-full border-2 border-[#25D366] opacity-0 animate-ping"></div>
+    
+    <MessageCircle className="text-white size-7 fill-white" />
+    
+    {/* Tooltip on Hover */}
+    <span class="absolute right-full mr-4 bg-white text-ana-text text-xs font-medium py-1.5 px-3 rounded-lg shadow-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none border border-gray-100 hidden md:block">
+      Agende sua sessão
+    </span>
+  </div>
+</a>

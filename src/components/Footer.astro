@@ -1,0 +1,54 @@
+---
+import { Instagram, Linkedin, Mail } from "lucide-react";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-ana-offwhite border-t border-ana-terracotta-suave/10 py-12">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
+      <div class="flex flex-col items-center md:items-start">
+         <img src="/logo.png" alt="Angelo" class="h-12 w-auto mb-4 opacity-90" />
+         <p class="font-inter text-ana-text/60 text-sm">
+          Psicólogo & Psicanalista
+        </p>
+      </div>
+
+    {/* Social Links */}
+    <div class="flex gap-6">
+      <a 
+        href="#" 
+        aria-label="Instagram"
+        class="text-ana-text/60 hover:text-ana-terracotta-suave transition-colors duration-300"
+      >
+        <Instagram className="size-5" />
+      </a>
+      <a 
+        href="#" 
+        aria-label="LinkedIn"
+        class="text-ana-text/60 hover:text-ana-terracotta-suave transition-colors duration-300"
+      >
+        <Linkedin className="size-5" />
+      </a>
+      <a 
+        href="mailto:contato@exemplo.com" 
+        aria-label="Email"
+        class="text-ana-text/60 hover:text-ana-terracotta-suave transition-colors duration-300"
+      >
+        <Mail className="size-5" />
+      </a>
+    </div>
+
+    {/* Credits */}
+    <div class="text-center md:text-right">
+      <p class="font-inter text-xs text-ana-text/40">
+        Psicologia com ética e acolhimento.
+      </p>
+      {/* <p class="font-inter text-[10px] text-ana-text/30 mt-1">
+        Desenvolvido com ❤️
+      </p> */}
+    </div>
+
+    </div>
+  </div>
+</footer>

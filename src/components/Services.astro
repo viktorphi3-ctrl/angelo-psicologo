@@ -1,0 +1,56 @@
+---
+import { FadeIn } from "./react/FadeIn";
+import { Brain, Clock } from "lucide-react";
+
+const services = [
+  {
+    title: "Psicoterapia Convencional",
+    description: "Você determina quando começa e quando termina, tudo no seu tempo, alinhado às suas expectativas.",
+    icon: Brain,
+    highlight: false
+  },
+  {
+    title: "Psicoterapia Breve",
+    description: "Consiste em um método de tratamento com 12 à 15 sessões. Ideal para quem quer mudanças mais rápidas.",
+    icon: Clock,
+    highlight: true
+  }
+];
+---
+
+<section class="py-16 md:py-24 lg:py-32 bg-ana-offwhite relative overflow-hidden">
+  {/* Background Texture */}
+  <div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#C78D75_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+  <div class="container mx-auto px-6 relative z-10 transition-all duration-500">
+    <div class="flex flex-col items-center text-center mb-24">
+      <FadeIn client:visible>
+        <h2 class="font-playfair text-4xl md:text-5xl text-ana-text mb-6">
+          Formas de Atendimento
+        </h2>
+        <div class="w-16 h-0.5 bg-ana-terracotta-suave/50 rounded-full mx-auto"></div>
+      </FadeIn>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 md:gap-16 max-w-5xl mx-auto">
+      {services.map((service, index) => (
+        <FadeIn client:visible delay={index * 0.2} direction="up" className="h-full">
+          <div class={`h-full p-12 rounded-2xl transition-all duration-300 border flex flex-col items-start ${service.highlight ? 'bg-ana-terracotta-suave/5 border-ana-terracotta-suave/30 shadow-2xl shadow-ana-terracotta-suave/10 scale-[1.02]' : 'bg-white border-gray-100 hover:border-ana-terracotta-suave/30 hover:shadow-xl hover:-translate-y-2'}`}>
+            
+            <div class={`p-5 rounded-xl mb-10 ${service.highlight ? 'bg-ana-terracotta-suave text-white shadow-lg' : 'bg-ana-offwhite text-ana-terracotta-suave'}`}>
+              <service.icon className="size-10" strokeWidth={1.25} />
+            </div>
+
+            <h3 class="font-playfair text-3xl text-ana-text mb-6 font-medium">
+              {service.title}
+            </h3>
+
+            <p class="font-inter text-ana-text/80 text-lg leading-relaxed mb-6 flex-grow">
+              {service.description}
+            </p>
+          </div>
+        </FadeIn>
+      ))}
+    </div>
+  </div>
+</section>
