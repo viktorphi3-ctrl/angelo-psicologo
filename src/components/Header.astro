@@ -4,8 +4,23 @@ import { FadeIn } from "./react/FadeIn";
 
 <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-ana-offwhite/80 backdrop-blur-md border-b border-ana-terracotta-suave/10">
   <div class="container mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
-    <a href="/" class="block hover:opacity-80 transition-opacity">
-      <img src="/logo.png" alt="Angelo - Psicólogo e Psicanalista" class="h-12 md:h-16 w-auto" />
+    <a href="/" class="flex items-center gap-4 hover:opacity-90 transition-opacity group">
+      <img src="/logo.png" alt="Angelo - Psicólogo e Psicanalista" class="h-12 md:h-14 w-auto" />
+      
+      <div class="flex flex-col">
+        <h1 class="font-playfair text-lg md:text-xl text-ana-text font-medium leading-tight group-hover:text-ana-terracotta-suave transition-colors">
+          Angelo Yano Dezoti
+        </h1>
+        <div class="flex flex-col md:flex-row md:items-center md:gap-2">
+          <span class="font-inter text-[10px] md:text-xs text-ana-text/70 uppercase tracking-wider">
+            Psicólogo & Psicanalista
+          </span>
+          <span class="hidden md:block w-1 h-1 rounded-full bg-ana-terracotta-suave/40"></span>
+          <span class="font-inter text-[10px] md:text-xs text-ana-text/50">
+            CRP-08/45429
+          </span>
+        </div>
+      </div>
     </a>
 
     <a 
