@@ -5,9 +5,9 @@
   --color-ana-beige: #F4F1EA;
   --color-ana-terracotta: #DDA15E;
   /* Adjusted to be softer/warmer based on "terracotta suave" */
-  /* Actually strictly speaking terracotta is more reddish-brown, like #E07A5F. Let's use #C78D75 for "suave". */
-  /* Or maybe #BC6C25 (earthy). Let's stick to a sophisticated one. */
-  --color-ana-terracotta-suave: #C78D75;
+  /* Updated to a darker, more intense terracotta based on client feedback (#9F513F - "Reddish Terracotta") */
+  /* Further darkened based on feedback ("escrurecer mais um pouco") -> #7D3E30 */
+  --color-ana-terracotta-suave: #7D3E30;
   --color-ana-offwhite: #FAF9F6;
   --color-ana-text: #2D2A26;
 
