@@ -1,5 +1,5 @@
 ---
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const currentYear = new Date().getFullYear();
 ---
@@ -17,7 +17,9 @@ const currentYear = new Date().getFullYear();
     {/* Social Links */}
     <div class="flex gap-6">
       <a 
-        href="#" 
+        href="https://www.instagram.com/rabiscojogado" 
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="Instagram"
         class="text-ana-text/60 hover:text-ana-terracotta-suave transition-colors duration-300"
       >
@@ -26,16 +28,16 @@ const currentYear = new Date().getFullYear();
       <a 
         href="#" 
         aria-label="LinkedIn"
-        class="text-ana-text/60 hover:text-ana-terracotta-suave transition-colors duration-300"
+        class="hidden text-ana-text/60 hover:text-ana-terracotta-suave transition-colors duration-300"
       >
         <Linkedin className="size-5" />
       </a>
       <a 
-        href="mailto:contato@exemplo.com" 
-        aria-label="Email"
+        href="https://wa.me/554498711871" 
+        aria-label="WhatsApp"
         class="text-ana-text/60 hover:text-ana-terracotta-suave transition-colors duration-300"
       >
-        <Mail className="size-5" />
+        <MessageCircle className="size-5" />
       </a>
     </div>
 
